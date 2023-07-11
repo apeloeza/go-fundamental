@@ -34,20 +34,52 @@ func main() {
 	fmt.Println(user3)
 	fmt.Println(user4)
 
-	//? struct sebagai parameter ===================================
+	//? struct sebagai parameter dari function =============================================
 
 	user5 := User{5, "Zelda", "Lightning", "zelda.lightning@gmail.com", true}
 	user6 := User{6, "Equard", "Dodi", "equard.dodi@gmail.com", true}
+	user7 := User{7, "kopi", "nako", "kopinako@nako.com", true}
 
 	displayUser1 := displayUser(user5)
 	displayUser2 := displayUser(user6)
 
 	fmt.Println(displayUser1)
 	fmt.Println(displayUser2)
+
+	fmt.Println(user7)
+
+	//?==========================================
+
+	user8 := User{8, "sah", "rini", "sahrini@rini.com", true}
+	user9 := User{9, "ri", "ri", "riri@ri.com", true}
+	users := []User{user8, user9}
+	group := Group{"Gamer", user, users, true}
+	displayGroup(group)
+
 }
 
-func displayUser(user5 User) string {
-	result := fmt.Sprintf("Name : %s %s, Email : %s", user5.FirstName, user5.LastName, user5.Email)
+//? embeded struct juga bisa menjadi atribut/ field sebuah struck lain
+
+type Group struct {
+	name        string
+	admin       User
+	users       []User
+	IsAvailable bool
+}
+
+func displayGroup(group Group) {
+	fmt.Printf("Name : %s", group.name)
+	fmt.Println("")
+	fmt.Printf("Member count : %d", len(group.users))
+	fmt.Println("")
+
+	for _, user := range group.users {
+		fmt.Println(user.FirstName)
+	}
+}
+
+func displayUser(user8 User) string {
+	result := fmt.Sprintf("Name : %s %s, Email : %s", user8.FirstName, user8.LastName, user8.Email)
 	//%s = menampilkan string
 	return result
 }

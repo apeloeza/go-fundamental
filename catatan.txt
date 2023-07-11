@@ -1,19 +1,37 @@
-go build -o keren
--o <namaProjek> = specefied project
-Sprintf = mengembalikan sebuah string, bisa menggunakan format
-Printf = mencetak sebuah string
-Package :
-1. Executable   <main>              (langsung dieksekusi)
-2. Library      <selainMain>        (yg tidak langsung di exsekusi)
-package kalkulasi
-Package GlobaPublicl diawali Kapital example Add
-root pertama berdasar nama module (cat go.mod)
-function depan kecil untuk 1 package yg sama example add
-import :
-1. standard Library
-2. package berbeda
-3. yang dibikin orang lain
-<Variaber><namaVariabel><tipedataVariabel>
-example var name string
-|| = atau <pipe>
-array 1.34
+1. Perkenalan
+    Instalasi --> install Go, VS Code, Configurasi Extenction Go, Go Coding
+
+2. konsep package dan arti penting function main
+    go build -o keren
+    -o <namaProjek> = specefied project
+    Sprintf = mengembalikan sebuah string, bisa menggunakan format
+    Printf = mencetak sebuah string
+    Package :
+    1. Executable   <main>              (langsung dieksekusi)
+    2. Library      <selainMain>        (yg tidak langsung di exsekusi)
+
+3. Package Lebih lanjut
+    package kalkulasi
+    Package GlobaPublic diawali Kapital example Add
+    root pertama berdasar nama module (cat go.mod)
+    function depan kecil untuk 1 package yg sama example add
+    import :
+    1. standard Library
+    2. package berbeda
+    3. yang dibikin orang lain
+    package kalkulasi
+    Package GlobaPublicl diawali Kapital example Add
+    root pertama berdasar nama module (cat go.mod)
+    function depan kecil untuk 1 package yg sama example add
+    import :
+    1. standard Library
+    2. package berbeda
+    3. yang dibikin orang lain
+
+4. Variabel, Tipe data dan nilai default
+    <Variaber><namaVariabel><tipedataVariabel>
+    example var name string
+    || = atau <pipe>
+    array 1.34
+
+5. If Condition

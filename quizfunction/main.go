@@ -29,6 +29,16 @@ func main() {
 	fmt.Println(result)
 }
 
+func sum(numbers []int) int {
+	// kita melakukan looping
+	var total int
+	for _, number := range numbers {
+		total = total + number
+	}
+
+	return total
+}
+
 func calculate(number, numberTwo int, operation string) (int, error) {
 	var result int
 	var errorResult error
@@ -47,14 +57,4 @@ func calculate(number, numberTwo int, operation string) (int, error) {
 	}
 
 	return result, errorResult
-}
-
-func sum(numbers []int) int {
-	// kita melakukan looping
-	var total int
-	for _, number := range numbers {
-		total = total + number
-	}
-
-	return total
 }
