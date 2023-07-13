@@ -15,3 +15,7 @@ func Perkalian(number int, numberTwo int) int {
 func perkalian(number int, numberTwo int) int {
 	return number * numberTwo
 }
+
+func pembagian(number int, numberTwo int) int {
+	return number % numberTwo
+}
